@@ -91,6 +91,9 @@ interface BlogPost {
 ```
 
 **Variables de entorno (`.env`):**
+> [!CAUTION]
+> NUNCA se debe subir a github un .env. En este caso se sube porque no contiene información sensible, pero nunca debe subirse.
+
 ```env
 PORT=3000
 ```
