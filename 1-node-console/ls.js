@@ -1,5 +1,5 @@
 import { readdir, stat } from 'node:fs/promises'
-import path from 'node:path'
+import { join } from 'node:path'
 
 const consoleColors = {
     Reset: "\x1b[0m",
@@ -50,7 +50,7 @@ async function ls () {
     const files = await readAllFiles(folder)
 
     const filesPromises = files.map(async file => {
-        const filePath = path.join(folder, file)
+        const filePath = join(folder, file)
         const stat = await getFileStats(filePath)
 
         if (!stat) return `No se pudo leer el archivo ${filePath}`
