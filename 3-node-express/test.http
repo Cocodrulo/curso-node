@@ -1,0 +1,19 @@
+
+GET http://localhost:3000/posts/11
+
+###
+
+POST http://localhost:3000/post
+content-type: application/json
+
+{
+  "id": 11,
+  "title": "State Management in Modern Web Apps",
+  "content": "Managing state effectively is key to building scalable front-end applications. Tools and patterns like centralized stores help maintain consistency.",
+  "author": "Kevin Turner",
+  "publishedAt": "2025-04-01"
+}
+
+###
+
+GET http://localhost:3000/posts/11
